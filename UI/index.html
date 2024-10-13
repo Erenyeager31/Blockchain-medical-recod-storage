@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blood Bank DApp</title>
+    <link rel="icon" href="./icon.webp" type="image/icon type">
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav>
+      <div class="nav-title">
+        <img src="./icon.webp" alt="Icon" class="nav-icon" /> <!-- Replace with the actual path to your icon -->
+        <h1>Blood Bank DApp</h1>
+      </div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="ViewRecords.html">View Records</a></li>
+        <li><a href="Statistics.html">Statistics</a></li>
+      </ul>
+    </nav>    
+
+
+    <div>
+      <h3>Add Patient Record</h3>
+      <label>Patient Name:</label>
+      <input
+        type="text"
+        id="patientName"
+        placeholder="Enter patient name"
+      /><br />
+      <label>Doctor Name:</label>
+      <input
+        type="text"
+        id="doctorName"
+        placeholder="Enter doctor name"
+      /><br />
+      <label>Blood Type:</label>
+      <input type="text" id="bloodType" placeholder="Enter blood type" /><br />
+      <label>Phone Number:</label>
+      <input type="text" id="phoneNumber" placeholder="Enter phone number" /><br />
+      <label>Email:</label>
+      <input type="email" id="email" placeholder="Enter email" /><br />
+      <label>Date of Admission:</label>
+      <input type="date" id="dateOfAdmission" /><br />
+      <button onclick="addPatient()">Add Patient</button>
+    </div>
+
+    <div>
+      <h3>Search Patients</h3>
+      <input
+        type="text"
+        id="searchTerm"
+        placeholder="Search by name"
+      />
+      <button onclick="searchPatients()">Search</button>
+    </div>
+
+    <div>
+      <h3>Stored Patients</h3>
+      <table id="patientsTable">
+        <thead>
+          <tr>
+            <th>Patient Name</th>
+            <th>Doctor Name</th>
+            <th>Blood Type</th>
+            <th>Phone Number</th>
+            <th>Email</th>
+            <th>Date of Admission</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="patientsList"></tbody>
+      </table>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.36/dist/web3.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

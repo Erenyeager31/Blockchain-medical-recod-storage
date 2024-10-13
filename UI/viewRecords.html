@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>View Patient Records</title>
+    <link rel="icon" href="./icon.webp" type="image/icon type">
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="ViewRecords.html">View Records</a></li>
+        <li><a href="Statistics.html">Statistics</a></li>
+      </ul>
+    </nav>
+
+    <h1>Patient Records Viewer</h1>
+
+    <div>
+      <h3>Stored Patients</h3>
+      <table id="patientsTable">
+        <thead>
+          <tr>
+            <th>Patient Name</th>
+            <th>Doctor Name</th>
+            <th>Blood Type</th>
+            <th>Phone Number</th>
+            <th>Email</th>
+            <th>Date of Admission</th>
+          </tr>
+        </thead>
+        <tbody id="patientsList"></tbody>
+      </table>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.36/dist/web3.min.js"></script>
+    <script src="viewRecords.js"></script>
+  </body>
+</html>
